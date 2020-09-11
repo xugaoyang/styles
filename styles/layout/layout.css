@@ -18,6 +18,11 @@
   position: sticky !important;
 }
 
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
 .tc {
   text-align: center;
 }
@@ -28,4 +33,22 @@
 
 .tr {
   text-align: right;
+}
+
+.flex-single-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-multi-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-center {
+  display: grid;
+  place-items: center;
 }

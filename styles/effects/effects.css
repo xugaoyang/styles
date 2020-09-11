@@ -1,1 +1,23 @@
-null
+.rounded-0 {
+  border-radius: 0px !important;
+}
+
+.rounded-2 {
+  border-radius: 2px !important;
+}
+
+.rounded-4 {
+  border-radius: 4px !important;
+}
+
+.rounded-6 {
+  border-radius: 6px !important;
+}
+
+.rounded-8 {
+  border-radius: 8px !important;
+}
+
+.rounded-10 {
+  border-radius: 10px !important;
+}

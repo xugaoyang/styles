@@ -1,7 +1,13 @@
 // 效果
 
 // 圆角
-
+$radius-size:0;
+@while $radius-size <= 10 {
+  .rounded-#{$radius-size} {
+    border-radius: 1px * $radius-size !important;
+  }
+  $radius-size: $radius-size + 2;
+}
 // 常用阴影
 
 // 常用动画

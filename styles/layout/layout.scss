@@ -8,6 +8,12 @@
 }
 // flex
 
+// 两端对齐
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
 // 垂直居中
 
 // 水平居中
@@ -26,5 +32,19 @@
 }
 
 // 水平垂直居中
-
+.flex-single-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-multi-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.grid-center {
+  display: grid; // 或 inline-grid
+  place-items: center;
+}
 // 栅格
