@@ -1,10 +1,29 @@
 // 常用布局
 
+// 定位
+@each $pos-type in static, relative, absolute, fixed, sticky {
+  .position-#{$pos-type} {
+    position: #{$pos-type} !important;
+  }
+}
 // flex
 
 // 垂直居中
 
 // 水平居中
+.tc {
+  text-align: center;
+}
+
+// 水平居左
+.tl {
+  text-align: left;
+}
+
+// 水平靠右
+.tr {
+  text-align: right;
+}
 
 // 水平垂直居中
 
