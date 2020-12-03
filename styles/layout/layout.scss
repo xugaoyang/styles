@@ -16,11 +16,14 @@
 
 // 垂直居中
 
-// 水平居中
+// 行内水平居中
 .tc {
   text-align: center;
 }
-
+// 定宽水平居中
+.margin-auto {
+  margin: 0 auto;
+}
 // 水平居左
 .tl {
   text-align: left;
@@ -46,5 +49,12 @@
 .grid-center {
   display: grid; // 或 inline-grid
   place-items: center;
+}
+// 未知宽高水平垂直居中
+.position-center {
+  position:absolute;
+  left: 50%;
+  top:50%;
+  transform: translate(-50%, -50%);
 }
 // 栅格
