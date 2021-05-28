@@ -1,6 +1,6 @@
 # styles
 
-## common styles for myself
+## common styles
 
 ### Parts
 - reset
