@@ -1,11 +1,11 @@
 @charset "UTF-8";
 /* 盒模型 */
 .box-border {
-  box-sizing: border-box;
+  box-sizing: border-box !important;
 }
 
 .box-content {
-  box-sizing: content-box;
+  box-sizing: content-box !important;
 }
 
 /* 元素框类型 */
@@ -289,6 +289,10 @@
 }
 
 /* z-index */
+.z-9999 {
+  z-index: 9999;
+}
+
 /* 弹性布局flex */
 .flex {
   display: flex;
@@ -358,10 +362,6 @@
   flex-shrink: 1;
 }
 
-.order-0 {
-  order: 0 !important;
-}
-
 .order-1 {
   order: 1 !important;
 }
@@ -422,43 +422,79 @@
   order: 0;
 }
 
-.tc {
-  text-align: center;
+/* 文本对齐 */
+.text-left {
+  text-align: left !important;
 }
 
-.margin-auto {
-  margin: 0 auto;
+.text-center {
+  text-align: center !important;
 }
 
-.tl {
-  text-align: left;
+.text-right {
+  text-align: right !important;
 }
 
-.tr {
-  text-align: right;
+.text-justify {
+  text-align: justify !important;
 }
 
-.flex-single-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* 垂直对齐 */
+.vertical-baseline {
+  vertical-align: baseline !important;
 }
 
-.flex-multi-center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.vertical-top {
+  vertical-align: top !important;
 }
 
-.grid-center {
-  display: grid;
-  place-items: center;
+.vertical-middle {
+  vertical-align: middle !important;
 }
 
-.position-center {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+.vertical-bottom {
+  vertical-align: bottom !important;
+}
+
+.vertical-text-top {
+  vertical-align: text-top !important;
+}
+
+.vertical-text-bottom {
+  vertical-align: text-bottom !important;
+}
+
+/* 文本空格 */
+.whitespace-normal {
+  white-space: normal !important;
+}
+
+.whitespace-nowrap {
+  white-space: nowrap !important;
+}
+
+.whitespace-pre {
+  white-space: pre !important;
+}
+
+.whitespace-pre-line {
+  white-space: pre-line !important;
+}
+
+.whitespace-pre-wrap {
+  white-space: pre-wrap !important;
+}
+
+/* 文本换行 */
+.break-normal {
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.break-words {
+  overflow-wrap: break-word;
+}
+
+.break-all {
+  word-break: break-all;
 }
