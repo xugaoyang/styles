@@ -113,3 +113,27 @@ $gap-size: 0;
   $gap-size: $gap-size + 5;
 }
 
+@each $property in auto, start, end, center, stretch {
+  // 控制网格项目如何沿其内联轴对齐
+  .justify-items-#{$property} {
+    justify-items: $property !important;
+  }
+  // 控制单个网格项如何沿其内联轴对齐
+  .justify-self-#{$property} {
+    justify-self: $property !important;
+  }
+  // 控制网格项目如何在水平和垂直方向对齐
+  .place-items-#{$property} {
+    place-items: $property !important;
+  }
+  // 控制单个项目如何在水平和垂直方向上对齐
+  .place-self-#{$property} {
+    place-self: $property !important;
+  }
+}
+
+@each $name, $val in (center, center), (start, start), (end, end), (between, space-between), (around, space-around), (evenly, space-evenly), (stretch, stretch) {
+  .place-content-#{$name} {
+    place-content: $val !important;
+  }
+}

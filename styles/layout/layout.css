@@ -306,11 +306,11 @@
   flex-direction: row-reverse !important;
 }
 
-.flex-column {
+.flex-col {
   flex-direction: column !important;
 }
 
-.flex-column-reverse {
+.flex-col-reverse {
   flex-direction: column-reverse !important;
 }
 
@@ -420,6 +420,94 @@
 
 .order-none {
   order: 0;
+}
+
+.justify-start {
+  justify-content: flex-start !important;
+}
+
+.content-start {
+  align-content: flex-start !important;
+}
+
+.justify-end {
+  justify-content: flex-end !important;
+}
+
+.content-end {
+  align-content: flex-end !important;
+}
+
+.justify-center {
+  justify-content: center !important;
+}
+
+.content-center {
+  align-content: center !important;
+}
+
+.justify-between {
+  justify-content: space-between !important;
+}
+
+.content-between {
+  align-content: space-between !important;
+}
+
+.justify-around {
+  justify-content: space-around !important;
+}
+
+.content-around {
+  align-content: space-around !important;
+}
+
+.justify-evenly {
+  justify-content: space-evenly !important;
+}
+
+.content-evenly {
+  align-content: space-evenly !important;
+}
+
+.items-start {
+  align-items: flex-start !important;
+}
+
+.self-start {
+  align-self: flex-start !important;
+}
+
+.items-end {
+  align-items: flex-end !important;
+}
+
+.self-end {
+  align-self: flex-end !important;
+}
+
+.items-center {
+  align-items: center !important;
+}
+
+.self-center {
+  align-self: center !important;
+}
+
+.items-baseline {
+  align-items: baseline !important;
+}
+
+.self-baseline {
+  align-self: baseline !important;
+}
+
+.items-stretch {
+  align-items: stretch !important;
+}
+
+.self-stretch {
+  align-self: stretch !important;
 }
 
 /* 文本对齐 */

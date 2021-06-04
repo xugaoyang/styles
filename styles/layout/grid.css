@@ -449,3 +449,111 @@
 .gap-y-20 {
   row-gap: 20px;
 }
+
+.justify-items-auto {
+  justify-items: auto !important;
+}
+
+.justify-self-auto {
+  justify-self: auto !important;
+}
+
+.place-items-auto {
+  place-items: auto !important;
+}
+
+.place-self-auto {
+  place-self: auto !important;
+}
+
+.justify-items-start {
+  justify-items: start !important;
+}
+
+.justify-self-start {
+  justify-self: start !important;
+}
+
+.place-items-start {
+  place-items: start !important;
+}
+
+.place-self-start {
+  place-self: start !important;
+}
+
+.justify-items-end {
+  justify-items: end !important;
+}
+
+.justify-self-end {
+  justify-self: end !important;
+}
+
+.place-items-end {
+  place-items: end !important;
+}
+
+.place-self-end {
+  place-self: end !important;
+}
+
+.justify-items-center {
+  justify-items: center !important;
+}
+
+.justify-self-center {
+  justify-self: center !important;
+}
+
+.place-items-center {
+  place-items: center !important;
+}
+
+.place-self-center {
+  place-self: center !important;
+}
+
+.justify-items-stretch {
+  justify-items: stretch !important;
+}
+
+.justify-self-stretch {
+  justify-self: stretch !important;
+}
+
+.place-items-stretch {
+  place-items: stretch !important;
+}
+
+.place-self-stretch {
+  place-self: stretch !important;
+}
+
+.place-content-center {
+  place-content: center !important;
+}
+
+.place-content-start {
+  place-content: start !important;
+}
+
+.place-content-end {
+  place-content: end !important;
+}
+
+.place-content-between {
+  place-content: space-between !important;
+}
+
+.place-content-around {
+  place-content: space-around !important;
+}
+
+.place-content-evenly {
+  place-content: space-evenly !important;
+}
+
+.place-content-stretch {
+  place-content: stretch !important;
+}
