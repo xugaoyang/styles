@@ -1,9 +1,8 @@
 /* 盒模型 */
-.box-border {
-  box-sizing: border-box;
-}
-.box-content {
-  box-sizing: content-box;
+@each $property in border, content {
+  .box-#{$property} {
+    box-sizing: #{$property}-box !important;
+  }
 }
 /* 元素框类型 */
 $displayTypes: block, inline-block, inline, flex, inline-flex, table, table-caption, table-cell, table-column, table-column-group, table-footer-group, table-header-group, table-row-group, table-row, flow-root, grid, inline-grid, contents, hidden;
@@ -12,25 +11,25 @@ $displayTypes: block, inline-block, inline, flex, inline-flex, table, table-capt
     @if $property == hidden {
       display: none !important;
     } @else {
-      display: #{$property} !important;
+      display: $property !important;
     }
   }
 }
 /* 浮动 */
 @each $property in right, left, none {
   .float-#{$property} {
-    float: #{$property} !important;
+    float: $property !important;
   }
 }
 @each $property in right, left, both, none {
   .clear-#{$property} {
-    clear: #{$property} !important;
+    clear: $property !important;
   }
 }
 /* object fit */
 @each $property in contain, cover, fill, none, scale-down {
   .object-#{$property} {
-    object-fit: #{$property} !important;
+    object-fit: $property !important;
   }
 }
 /* object position */
@@ -45,7 +44,7 @@ $displayTypes: block, inline-block, inline, flex, inline-flex, table, table-capt
     } @else if $property == right-bottom {
       object-position: right bottom !important;
     } @else {
-      object-position: #{$property} !important;
+      object-position: $property !important;
     }
   }
 }
@@ -53,32 +52,32 @@ $displayTypes: block, inline-block, inline, flex, inline-flex, table, table-capt
 /* 溢出 */
 @each $property in auto, hidden, visible, scroll {
   .overflow-#{$property} {
-    overflow: #{$property} !important;
+    overflow: $property !important;
   }
   .overflow-x-#{$property} {
-    overflow: #{$property} !important;
+    overflow: $property !important;
   }
   .overflow-y-#{$property} {
-    overflow: #{$property} !important;
+    overflow: $property !important;
   }
 }
 /* 滚动行为 */
 @each $property in auto, contain, none {
   .overscroll-#{$property} {
-    overscroll-behavior: #{$property} !important;
+    overscroll-behavior: $property !important;
   }
   .overscroll-y-#{$property} {
-    overscroll-behavior-y: #{$property} !important;
+    overscroll-behavior-y: $property !important;
   }
   .overscroll-x-#{$property} {
-    overscroll-behavior-x: #{$property} !important;
+    overscroll-behavior-x: $property !important;
   }
 }
 
 /* 定位 */
 @each $property in static, relative, absolute, fixed, sticky {
   .position-#{$property} {
-    position: #{$property} !important;
+    position: $property !important;
   }
 }
 
@@ -88,28 +87,30 @@ $displayTypes: block, inline-block, inline, flex, inline-flex, table, table-capt
     @if $property == invisible {
       visibility: hidden !important;
     } @else {
-      visibility: #{$property} !important;
+      visibility: $property !important;
     }
   }
 }
 
 /* z-index */
-
+.z-9999 {
+  z-index: 9999;
+}
 
 /* 弹性布局flex */
 .flex {
   display: flex;
 }
 // flex-direction
-@each $property in row, row-reverse, column, column-reverse {
-  .flex-#{$property} {
-    flex-direction: #{$property} !important;
+@each $name, $val in (row, row), (row-reverse, row-reverse), (col, column), (col-reverse, column-reverse) {
+  .flex-#{$name} {
+    flex-direction: $val!important;
   }
 }
 // flex-wrap
 @each $property in wrap, wrap-reverse, nowrap {
   .flex-#{$property} {
-    flex-wrap: #{$property} !important;
+    flex-wrap: $property !important;
   }
 }
 // shrink & grow
@@ -140,7 +141,7 @@ $displayTypes: block, inline-block, inline, flex, inline-flex, table, table-capt
 .flex-shrink {
   flex-shrink: 1;
 }
-$order-number:0;
+$order-number: 1;
 @while $order-number <= 12 {
   .order-#{$order-number} {
     order: $order-number !important;
@@ -156,50 +157,56 @@ $order-number:0;
 .order-none {
   order: 0;
 }
-
-
-
-// 垂直居中
-
-// 行内水平居中
-.tc {
-  text-align: center;
+// 盒对齐
+@each $name, $val in (start, flex-start), (end, flex-end), (center, center), (between, space-between), (around, space-around), (evenly, space-evenly) {
+  .justify-#{$name} {
+    justify-content: $val !important;
+  }
+  .content-#{$name} {
+    align-content: $val !important;
+  }
 }
-// 定宽水平居中
-.margin-auto {
-  margin: 0 auto;
-}
-// 水平居左
-.tl {
-  text-align: left;
-}
-
-// 水平靠右
-.tr {
-  text-align: right;
+@each $name, $val in (start, flex-start), (end, flex-end), (center, center), (baseline, baseline), (stretch, stretch) {
+  .items-#{$name} {
+    align-items: $val !important;
+  }
+  // flex或grid子项
+  .self-#{$name} {
+    align-self: $val !important;
+  }
 }
 
-// 水平垂直居中
-.flex-single-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+
+/* 文本对齐 */
+@each $property in left, center, right, justify {
+  .text-#{$property} {
+    text-align: $property !important;
+  }
 }
-.flex-multi-center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
+/* 垂直对齐 */
+@each $property in baseline, top, middle, bottom, text-top, text-bottom {
+  .vertical-#{$property} {
+    vertical-align: $property !important;
+  }
 }
-.grid-center {
-  display: grid; // 或 inline-grid
-  place-items: center;
+
+/* 文本空格 */
+@each $property in normal, nowrap, pre, pre-line, pre-wrap {
+  .whitespace-#{$property} {
+    white-space: $property !important;
+  }
 }
-// 未知宽高水平垂直居中
-.position-center {
-  position:absolute;
-  left: 50%;
-  top:50%;
-  transform: translate(-50%, -50%);
+
+/* 文本换行 */
+.break-normal {
+  overflow-wrap: normal;
+  word-break: normal;
 }
-// 栅格
+.break-words {
+  overflow-wrap: break-word;
+}
+.break-all {
+  word-break: break-all;
+}
