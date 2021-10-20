@@ -21,3 +21,19 @@
 .text-white {
   color: #fff !important;
 }
+
+.bg-deepgray {
+  background-color: #545c64 !important;
+}
+
+.text-deepgray {
+  color: #545c64 !important;
+}
+
+.bg-lightgreen {
+  background-color: lightgreen !important;
+}
+
+.text-lightgreen {
+  color: lightgreen !important;
+}
